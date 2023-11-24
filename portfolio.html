@@ -9,46 +9,81 @@
     <style>
         *{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .bg-div{
+            background-color: #d3ddec;
+        }
+        .bg-div:hover{
+            background-color: #c7d5e8;
+        }
+        .img-hover:hover{
+            transform: scale(1.1);
+        }
+        .home-btn{
+            background-color: #474b76; 
+            width: 300px; 
+            height: 60px;
+        }
+        .home-btn:hover{
+            background-color: #5c6191;
+        }
+        .card{
+            background-color: #2B2D42;
+            color: white;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #363952;
+        }
+        .social-icon{
+            color:#d3ddec;
         }
     </style>
 </head>
 <body style="background-color: #EDF2F4">
     <div class="sticky-top">
-        <nav class="navbar navbar-expand justify-content-center nav-underline" style="background-color: #2B2D42">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#about">O meni</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#pos">Postignuća</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#asp">Aspiracije</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#kon">Kontakt</a>
-                </li>
+        <nav class="navbar navbar-expand-sm justify-content-center nav-underline" style="background-color: #2B2D42">
+            <button class="navbar-toggler" type="button" style="background-color:#474b76;"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-3 justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">O meni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#pos">Postignuća</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#asp">Aspiracije</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#kon">Kontakt</a>
+                    </li>
                 </ul>
+            </div>
         </nav>
     </div>
     <div id="home" class="justify-content-center text-center p-3" style="background-image: url(background.jpg); height: 100vh;">
         <h1 style="color: white; margin-top: 14rem;">Moj portfolio</h1>
         <h2 style="color: white; margin-bottom: 7rem;">Anastasija Milošević</h2>
         <br>
-        <button type="button" class="btn" style="background-color: #474b76; width: 300px; height: 60px;">
+        <button type="button" class="btn mx-3 home-btn">
             <a href="#about" style="text-decoration: none; color: white;">Prikaži portfolio    <i class="fa-solid fa-arrow-down"></i></a>
         </button>
     </div>
-    <div id="about" style="background-color: #d3ddec;"class="justify-content-center text-center p-3 m-3">
+    <div id="about" class="justify-content-center text-center p-3 m-3 bg-div">
         <h1 style="color: #2B2D42;">O meni</h1>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-md-6">
                   <h4>Moj profil</h4>
-                  <img src="slikaportfolio.jpg" class="rounded-circle m-3" width="150" height="150">
+                  <img src="slikaportfolio.jpg" class="img-hover rounded-circle m-3" width="150" height="150">
                   <h6>Anastasija Milošević</h6>
                   <p>Moje ime je Anastasija Milošević. Imam 18 godina i trenutno sam učenik Prve kragujevačke gimnazije. Zanimaju me programiranje i baze podataka. U slobodno vreme volim da slušam muziku, igram igrice, šetam, družim se sa prijateljima i gledam filmove i serije.</p>
                 </div>
@@ -57,21 +92,21 @@
                     <div class="container">
                         <div class="row mx-auto">
                             <div class="col p-3">
-                                <img src="python.png" width="100" height="100">
+                                <img src="python.png" width="100" height="100" class="img-hover">
                                 <p>Python</p>
-                                <img src="c++.png" width="100" height="100">
+                                <img src="c++.png" width="100" height="100" class="img-hover">
                                 <p>C++</p>
                             </div>
                             <div class="col p-3">
-                                <img src="cs.png" width="90" height="100">
+                                <img src="cs.png" width="90" height="100" class="img-hover">
                                 <p>C#</p>
-                                <img src="html.png" width="100" height="100">
+                                <img src="html.png" width="100" height="100" class="img-hover">
                                 <p>HTML</p>
                             </div>
-                                <div class="col p-3">
-                                <img src="css.png" width="100" height="100">
+                            <div class="col p-3">
+                                <img src="css.png" width="100" height="100" class="img-hover">
                                 <p>CSS</p>
-                                <img src="sql.png" width="100" height="100">
+                                <img src="sql.png" width="90" height="100" class="img-hover">
                                 <p>SQL</p>
                             </div>
                         </div>
@@ -80,25 +115,25 @@
             </div>
         </div>
     </div>
-    <div id="pos" style="background-color: #d3ddec;"class="justify-content-center text-center p-3 m-3">
+    <div id="pos" class="justify-content-center text-center p-3 m-3 bg-div">
         <h1>Postignuća</h1>
         <div class="row text-center gap-4 m-3">
-            <div class="card col-lg m-3 mx-auto" style="background-color: #2B2D42; color: white;">
-                <img src="takmicenje.jpg" class="card-img-top" alt="...">
+            <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+                <img src="takmicenje.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Učešće na takmičenjima</h5>
                   <p class="card-text">U osnovnoj i srednjoj školi sam učestvovala na raznim takmičenjima iz srpskog jezika, engleskog jezika, hemije, biologije, geografije, matematike...</p>
                 </div>
               </div>
-              <div class="card col-lg m-3 mx-auto" style="background-color: #2B2D42; color: white;">
-                <img src="dvdkol.jpg" class="card-img-top" alt="...">
+              <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+                <img src="dvdkol.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Baza podataka za kolekciju DVD diskova</h5>
                   <p class="card-text">U četvrtoj godini srednje sam kao projekat iz Baza podataka napravila bazu koja čuva podatke o kolekciji DVD diskova.</p>
                 </div>
               </div>
-              <div class="card col-lg m-3 mx-auto" style="background-color: #2B2D42; color: white;">
-                <img src="hangman.jpg" class="card-img-top" alt="...">
+              <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+                <img src="hangman.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Igra Vešalice</h5>
                   <p class="card-text">U prvoj godini srednje sam kao projekat iz Programiranja napravila igricu "Vešalice" u Pythonu</p>
@@ -106,25 +141,25 @@
               </div>
         </div>
     </div>
-    <div id="asp" style="background-color: #d3ddec;"class="text-center p-3 m-3">
+    <div id="asp" class="text-center p-3 m-3 bg-div">
         <h1>Aspiracije</h1>
         <div id="carousel" class="container-sm carousel carousel-dark slide mt-3">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="odlican.jpg" class="d-block w-50 mx-auto">
-                    <div class="carousel-caption d-none d-md-block w-50 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <img src="odlican.jpg" class="d-block w-75 mx-auto img-fluid">
+                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
                         <h5>Odličan uspeh na kraju četvrte godine srednje.</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="faks.png" class="d-block w-50 mx-auto">
-                    <div class="carousel-caption d-none d-md-block w-50 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <img src="faks.png" class="d-block w-75 mx-auto img-fluid">
+                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
                         <h5>Upis na željeni fakultet</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="posao.jpg" class="d-block w-50 mx-auto">
-                    <div class="carousel-caption d-none d-md-block w-50 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <img src="posao.jpg" class="d-block w-75 mx-auto img-fluid">
+                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
                         <h5>Zabavan i dobro plaćen posao u struci</h5>
                     </div>
                 </div>
@@ -139,7 +174,7 @@
               </button>
         </div>
     </div>
-    <div id="kon" style="background-color: #d3ddec;"class="justify-content-center text-center p-3 m-3">
+    <div id="kon" class="justify-content-center text-center p-3 m-3 bg-div">
         <h1>Kontakt</h1>
         <div class="m-3 w-50 mx-auto">
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email...">
@@ -151,10 +186,10 @@
     </div>
     <footer style="background-color: #2B2D42;"class="justify-content-center text-center p-5 mb-0 mt-3">
         <a href="https://www.instagram.com/anastasijam__/" style="text-decoration: none;">
-            <i class="fa-brands fa-instagram fa-2xl" style="color:#d3ddec"></i>
+            <i class="fa-brands fa-instagram fa-2xl social-icon"></i>
         </a>
         <a href="https://github.com/anastasijam27" style="text-decoration: none;">
-            <i class="fa-brands fa-github fa-2xl" style="color:#d3ddec"></i>
+            <i class="fa-brands fa-github fa-2xl social-icon"></i>
         </a>
         <p class="pt-3" style="color: #d3ddec;">© Anastasija Milošević. All rights reserved.</p>
     </footer>
