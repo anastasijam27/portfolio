@@ -37,6 +37,13 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             background-color: #363952;
         }
+        .carousel-caption{
+            color:#2B2D42; 
+            background-color:rgba(195, 207, 223, 0.785);
+        }
+        .carousel-caption:hover{
+            background-color:#adb8c7;
+        }
         .social-icon{
             color:#d3ddec;
         }
@@ -143,23 +150,23 @@
     </div>
     <div id="asp" class="text-center p-3 m-3 bg-div">
         <h1>Aspiracije</h1>
-        <div id="carousel" class="container-sm carousel carousel-dark slide mt-3">
+        <div id="carousel" class="container-sm carousel carousel-dark slide mt-3 col-lg-8">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="odlican.jpg" class="d-block w-75 mx-auto img-fluid">
-                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <div class="carousel-caption d-block w-70 mx-auto">
                         <h5>Odličan uspeh na kraju četvrte godine srednje.</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="faks.png" class="d-block w-75 mx-auto img-fluid">
-                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <div class="carousel-caption d-block w-70 mx-auto">
                         <h5>Upis na željeni fakultet</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="posao.jpg" class="d-block w-75 mx-auto img-fluid">
-                    <div class="carousel-caption d-block w-70 mx-auto" style="color:#2B2D42; background-color:#c3cfdfdd">
+                    <div class="carousel-caption d-block w-70 mx-auto">
                         <h5>Zabavan i dobro plaćen posao u struci</h5>
                     </div>
                 </div>
@@ -176,10 +183,10 @@
     </div>
     <div id="kon" class="justify-content-center text-center p-3 m-3 bg-div">
         <h1>Kontakt</h1>
-        <div class="m-3 w-50 mx-auto">
+        <div class="m-3 col-md-6 col-sm-8 mx-auto">
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email...">
         </div>
-        <div class="m-3 w-50 mx-auto">
+        <div class="m-3 col-md-6 col-sm-8 col-md-6 mx-auto">
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Your message..."></textarea>
         </div>
         <button type="button" class="btn btn-primary">Send</button>
