@@ -10,14 +10,19 @@ function prikaz(recenzije){
         usernames.innerText=recenzija.username;
         const comments=document.createElement("p");
         comments.innerText=recenzija.text;
-        const grades=document.createElement("p");
-        grades.innerText=zvezdice(recenzija.ocena);
+        const zvezdeContainer=document.createElement("div");
+        zvezdeContainer.innerHTML = zvezdice(recenzija.ocena);
         kartica.appendChild(usernames);
+        kartica.appendChild(zvezdeContainer);
         kartica.appendChild(comments);
-        kartica.appendChild(grades);
         recenzijeContainer.appendChild(kartica);
+        kartica.classList.add("kartica");
+        usernames.classList.add("usernames");
+        comments.classList.add("comments");
+        zvezdeContainer.classList.add("zvezdice");
     });
 }
 function zvezdice(ocena){
-    return "☆".repeat(ocena);
+    const zvezda = '<span class="fa fa-star"></span>'.repeat(ocena);
+    return zvezda;
 }

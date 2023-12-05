@@ -1,7 +1,7 @@
 recenzije = [
       {
         "username": "korisnik1",
-        "text": "Odličan frontend developer! Brza, efikasana i kreativana.",
+        "text": "Odličan frontend developer! Brza, efikasna i kreativana.",
         "ocena": 5
       },
       {
